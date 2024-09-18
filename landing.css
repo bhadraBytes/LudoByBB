@@ -1,0 +1,130 @@
+/* landing.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top left, #ff8a00, #e52e71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: backgroundAnimation 10s ease-in-out infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: radial-gradient(circle at top left, #ff8a00, #e52e71); }
+    50% { background: radial-gradient(circle at bottom right, #ff8a00, #e52e71); }
+    100% { background: radial-gradient(circle at top left, #ff8a00, #e52e71); }
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+    position: relative;
+    animation: cardAnimation 1s ease-in-out;
+}
+
+@keyframes cardAnimation {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.card.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.card.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.button-group, .options, .room-code, .join-form {
+    display: none;
+}
+
+.button-group.active, .options.active, .room-code.active, .join-form.active {
+    display: block;
+}
+
+.btn {
+    background: #ff8a00;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    margin: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background: #e52e71;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+    background: #ccc;
+    color: #333;
+}
+
+.back-btn:hover {
+    background: #bbb;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 15px 0;
+    width: calc(100% - 26px);
+    font-size: 1em;
+}
+
+#code-display {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.card {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.player-options, .options, .room-code, .join-form {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.player-options.active, .options.active, .room-code.active, .join-form.active {
+    opacity: 1;
+    transform: translateY(0);
+}

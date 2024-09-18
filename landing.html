@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menu</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="main-card">
+            <h1>Game Menu</h1>
+            <div class="button-group active" id="main-buttons">
+                <button id="single-player" class="btn">Single Player</button>
+                <button id="multiplayer" class="btn">Multiplayer</button>
+            </div>
+            <div class="player-options" id="player-options">
+                <button id="two-players" class="btn">2 Players</button>
+                <button id="three-players" class="btn">3 Players</button>
+                <button id="four-players" class="btn">4 Players</button>
+                <button id="back-options" class="btn back-btn">Back</button>
+            </div>
+            <div class="options" id="multiplayer-options">
+                <button id="create-room" class="btn">Create Room</button>
+                <button id="join-room" class="btn">Join Room</button>
+                <button id="back-multiplayer" class="btn back-btn">Back</button>
+            </div>
+            <div class="room-code" id="room-code">
+                <p>Your Room Code:</p>
+                <div id="code-display"></div>
+                <button id="back-room" class="btn back-btn">Back</button>
+            </div>
+            <div class="join-form" id="join-form">
+                <p>Enter Room Code:</p>
+                <input type="text" id="room-code-input" placeholder="Room Code">
+                <button id="submit-code" class="btn">Join</button>
+                <button id="back-join" class="btn back-btn">Back</button>
+            </div>
+        </div>
+    </div>
+    <script src="./landing.js"></script>
+</body>
+</html>

@@ -236,7 +236,7 @@ function removezoom(active){
             let ani = document.getElementById(active)
             ani.classList.remove("zoom")
         resolve("resolved")
-        }, 1000);
+        }, 1500);
     })
 }
 
